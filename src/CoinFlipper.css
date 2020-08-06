@@ -1,0 +1,57 @@
+body {
+	margin-top: 15%;
+}
+
+.CoinFlipper {
+      position: relative;
+      margin: 20px auto;
+      width: 200px;
+      height: 200px;
+      z-index: 1;
+}
+
+.CoinFlipper {
+      perspective: 1000;
+    
+}
+
+.face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden; 
+}
+
+.face.tails {
+      display: block;
+      transform: rotateX(180deg);
+      /*box-sizing: border-box;*/
+      color: white;
+      text-align: center;
+      background-color: #aaa;
+}
+
+.face.tails {
+    animation:
+        BackRotate 500ms linear 0ms infinite;
+}
+
+.face.heads {
+    animation:
+        Rotate 500ms linear 0ms infinite;
+}
+
+img {
+    width: 200px;
+    height:200px;
+}
+
+@keyframes Rotate {
+  from {transform:rotateX(0deg);}
+  to {transform:rotateX(360deg);}
+}
+ 
+@keyframes BackRotate {
+  from {transform:rotateX(180deg);}
+  to {transform:rotateX(540deg);}
+}
